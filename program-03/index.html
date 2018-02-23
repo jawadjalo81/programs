@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="SHORTCUT ICON" href="/images/favicon.ico">
+        <title>
+            program-03 folder
+        </title>
+		<script type="text/javascript" src="./program-03.js"></script>
+    </head>
+    <body>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #01</h3>
+	    <p>Enter two strings to find if the first is in the second.</p>
+	    <input type="text" id="Text_1" name="TextBox1"> First string<br>
+	    <input type="text" id="Text_1a">Second string<br>
+	    <button type="button" id="button1" onclick="Requirement01();">Is it in there?</button>
+	    <p id="result1"></p>
+		<script>
+		function Requirement01(){
+    var test = document.getElementById("Text_1").value;
+    var tester = document.getElementById("Text_1a").value;
+    if( test.indexOf(tester) >= 0){
+      document.getElementById("result1").innerHTML = document.getElementById("Text_1a").value + " is in the " + document.getElementById("Text_1").value;
+    }
+    else{
+            document.getElementById("result1").innerHTML = document.getElementById("Text_1a").value + " is not in the " + document.getElementById("Text_1").value;
+    }
+   }
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div style="background-color:cyan">
+	    <h3> Requirement #02</h3>
+	    <p>Initial string: My favorite foods are hot dogs, hot peppers, and pizza.</P>
+	    <input type="text" id="Text_2a" name="TextBox2a">
+	    <input type="text" id="Text_2b" name="TextBox2b"> 
+	    <button type="button" id="button2" onclick="Requirement02();"> Replace </button><br>
+	    <p id="result2"></p>
+		<script>
+		function Requirement02(){
+			var v1 = "Initial string: My favorite foods are hot dogs, hot peppers, and pizza.";
+			//document.getElementById("p02a").value;
+			var v2 = document.getElementById("Text_2a").value;
+			var v3 = document.getElementById("Text_2b").value;
+            var v4 = v1.replace(new RegExp(v2, 'g'),v3);
+			document.getElementById("result2").innerHTML = "Result: " + v4;
+		}
+		
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #03</h3>
+	    <p id="p03a">Enter a number from 500 (minimum) to 2000 (maximum).</p>
+	    <input type="text" id="Text_3" name="TextBox3">
+	    <button type="button" id="button3" onclick="Requirement03();"> Check number </button></br>
+	    <p id="result3"></p>
+		<p id="result3a"></p>
+		<script>
+		function Requirement03(){
+    var x = parseInt(document.getElementById("Text_3").value);
+    var message = document.getElementById("result3a");
+    message.innerHTML = "";
+    //x = document.getElementById("Text_3").value;
+    try {
+        if(x === "") throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x < 500){
+            var val3 = 500 - x;
+            throw " too low! " + val3 + " below 500.";
+        }
+        if(x > 2000){
+            var val3a = x - 2000;
+            throw " too high! " + val3a + " above 2000.";
+        }
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+    finally {
+        document.getElementById("result3").innerHTML = "You entered: " + x;
+    }
+    }
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #04</h3>
+	    <p>This is an example to demonstraite the console.log() method and debugger keyword.</p>
+            <button type="button" id="button4" onclick="Requirement04();"> Click me to see. </button></br>
+            <p id="p04a"></p>
+			<script>
+     function Requirement04(){
+			var a = "Console Dot";
+			var b = " Log()!";
+			var c = a + b;
+			console.log(c);
+			var x = "Debugger activated!";
+			debugger;
+			document.getElementById("p04a").innerHTML = x;
+     }
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div class="items5">
+	    <h3> Requirement #05</h3>
+            <p>12 primary components of Javascript style guide</p>
+            <ol style="background-color:cyan">
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(1);">Variable Names</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(2);">Spaces Around Operators</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(3);">Code Indentation</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(4);">Statement Rules Functions</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(5);">Statement Rules Loops</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(6);">Statement Rules Conditionals</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(7);">Object Rules</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(8);">Line Length < 80</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(9);">Naming Conventions</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(10);">Loading JavaScript in HTML</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(11);">Accessing HTML Elements</li>
+                <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" onclick="Requirement05(12);">File Extensions</li>
+            </ol>
+			<script>
+			function Requirement05(val){
+    if(val === 1){
+        window.alert("Variable Names - At W3schools we use camelCase for identifier names (variables and functions). All names start with a letter.");
+    }
+    if(val === 2){
+        window.alert("Spaces Around Operators - Always put spaces around operators ( = + - * / ), and after commas:");
+    }
+    if(val === 3){
+        window.alert("Code Indentation - Always use 4 spaces for indentation of code blocks:");
+    }
+    if(val === 4){
+        window.alert("Statement Rules - General rules for simple statements: Always end a simple statement with a semicolon.");
+    }
+    if(val === 5){
+        window.alert("Functions - Put the opening bracket at the end of the first line. Put the closing bracket on a new line, without leading spaces.");
+    }
+    if(val === 6){
+        window.alert("Conditionals - Do not end a complex statement with a semicolon.");
+    }
+    if(val === 7){
+        window.alert("Object Rules - Use colon plus one space between each property and its value. Use quotes around string values, not around numeric values.");
+    }
+    if(val === 8){
+        window.alert("Line Length < 80 - For readability, avoid lines longer than 80 characters. If a JavaScript statement does not fit on one line, the best place to break it, is after an operator or a comma.");
+    }
+    if(val === 9){
+        window.alert("Naming Conventions - Variable and function names written as camelCase. Constants (like PI) written in UPPERCASE.");
+    }
+    if(val === 10){
+        window.alert("Loading JavaScript in HTML - Use simple syntax for loading external scripts (the type attribute is not necessary).");
+    }
+    if(val === 11){
+        window.alert("Accessing HTML Elements - A consequence of using 'untidy' HTML styles, might result in JavaScript errors. If possible, use the same naming convention (as JavaScript) in HTML. ");
+    }
+    if(val === 12){
+        window.alert("File Extensions - HTML files should have a .html extension (not .htm). CSS files should have a .css extension. JavaScript files should have a .js extension.");
+    }
+    }
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #06</h3>
+	    <p> Optional </p>
+		</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #07</h3>
+	    <p>11 primary components of Javascript Best Practices</p>
+            <ol >
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(1);">Avoid Global Variables</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(2);">Always Declare Local Variables</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(3);">Declarations on Top</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(4);">Initialize Variables</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(5);">Never Declare Number, String, or Boolean Objects</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(6);">Don't Use new Object()</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(7);">Beware of Automatic Type Conversions</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(8);">Use === Comparison</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(9);">Use Parameter Defaults</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(10);">End Your Switches with Defaults</li>
+                <li onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="Requirement07(11);">Avoid Using eval()</li>
+            </ol>
+			<script>
+			function Requirement07(val){
+    if(val === 1){
+        window.alert("Avoid Global Variables - Minimize the use of global variables. This includes all data types, objects, and functions. Global variables and functions can be overwritten by other scripts. Use local variables instead, and learn how to use closures.");
+    }
+    if(val === 2){
+        window.alert("Always Declare Local Variables - All variables used in a function should be declared as local variables. Local variables must be declared with the var keyword, otherwise they will become global variables.");
+    }
+    if(val === 3){
+        window.alert("Declarations on Top - It is a good coding practice to put all declarations at the top of each script or function.");
+    }
+    if(val === 4){
+        window.alert("Initialize Variables - It is a good coding practice to initialize variables when you declare them.");
+    }
+    if(val === 5){
+        window.alert("Never Declare Number, String, or Boolean Objects - Always treat numbers, strings, or booleans as primitive values. Not as objects. Declaring these types as objects, slows down execution speed, and produces nasty side effects.");
+    }
+    if(val === 6){
+        window.alert("Don't Use new Object() - Use {} instead of new Object().Use [] instead of new Array().");
+    }
+    if(val === 7){
+        window.alert("Beware of Automatic Type Conversions - Beware that numbers can accidentally be converted to strings or NaN (Not a Number).");
+    }
+    if(val === 8){
+        window.alert("Use === Comparison - The == comparison operator always converts (to matching types) before comparison. The === operator forces comparison of values and type.");
+    }
+    if(val === 9){
+        window.alert("Use Parameter Defaults - If a function is called with a missing argument, the value of the missing argument is set to undefined. Undefined values can break your code. It is a good habit to assign default values to arguments.");
+    }
+    if(val === 10){
+        window.alert("End Your Switches with Defaults - Always end your switch statements with a default. Even if you think there is no need for it.");
+    }
+    if(val === 11){
+        window.alert("Avoid Using eval() - The eval() function is used to run text as code. In almost all cases, it should not be necessary to use it. Because it allows arbitrary code to be run, it also represents a security problem.");
+    }
+}
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+         <div>
+    <h3> Requirement #08</h3>
+    <p>Click the button to conver a JSON object to JavaScript object</p>
+    <button type="button" id="button08" onclick="Requirement08();"> JSON Object </button></br>
+    <p id="result08"></p>
+    <p id="result08a"></p>
+    <p id="result08b"></p>
+    <p id="result08c"></p>
+    <script>
+    function Requirement08(){
+        var x8 = "";
+        var capitals = '{ "stateCapital" : [{ "stateName":"Texas" , "capitalName":"Austin", "qualityRating":"10" },' +
+        '{ "stateName":"Wyoming" , "capitalName":"Cheyenne", "qualityRating":"6" },' +
+            '{ "stateName":"Nevada" , "capitalName":"Carson City", "qualityRating":"8" },' +
+            '{ "stateName":"Kentucky" , "capitalName":"Frankfort", "qualityRating":"7" }]}';
+        console.log(capitals);
+        var obj = JSON.parse(capitals);
+        console.log(obj);
+        for(var i in obj){
+            for(var h in obj[i]){ 
+            x8 += "stateName:"+ obj[i][h].stateName + ", capitalName: " + obj[i][h].capitalName + ", qualityRating: " + obj[i][h].qualityRating + "</br>";
+        }}
+        document.getElementById("result08").innerHTML = x8;
+    }
+    </script>
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #09</h3>
+	    <form name="myForm" action="/program-03.js" onsubmit="return validateForm09();" method="post">
+		First Name: <input type="text" name="fname">
+		Last Name: <input type="text" name="lname">
+		<input type="submit" value="Submit">
+		</form> 
+	    <script>
+		function validateForm09(){
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("First Name must be filled out");
+        return false;
+    }
+    var a = document.forms["myForm"]["lname"].value;
+    if (a == "") {
+        alert("Last Name must be filled out");
+        return false;
+    }else{
+        alert("Thank you for properly filling out this form #09.");
+    }
+  }
+	    </script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #10</h3>
+	    <form name="myForm10" action="/program-03.js" onsubmit="validateForm10();" method="post">
+		First Name: <input type="text" name="fname10" required>
+		Last Name: <input type="text" name="lname10" required>
+		<input type="submit" value="Submit">
+		</form> 
+	    <script>
+		function validateForm10(){
+    alert("Thank you for properly filling out this form #10.");
+}
+	    </script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #11</h3>
+		<p>Here we test a value to be rangeOverflow, rangeUnderflow, or valueMissing.</p>
+		<p>The range here is 1 - 100</p>
+		<input id="id11" type="number" min="1" max="100" required>
+		<button onclick="myFunction();">Check it!</button>
+		<p id="result11"></p>
+		<script>
+		function myFunction() {
+    var txt = "";
+    if (document.getElementById("id11").validity.rangeOverflow) {
+        txt = "Value too large";
+    }
+    else if (document.getElementById("id11").validity.rangeUnderflow) {
+        txt = "Value too small";
+    }
+    else if (document.getElementById("id11").validity.valueMissing) {
+        txt = "You must enter a value.";
+    }
+    else{
+        txt = "Value is within range.";
+    }
+    document.getElementById("result11").innerHTML = txt;
+}
+var person = {  //literal
+    firstName:"John",
+    lastName:"Doe",
+    age:"50",
+    eyeColor:"blue"
+};
+var cities = new Object();  //keyword
+cities.cityName = "Round Rock";
+cities.country = "USA";
+cities.population = "120,892";
+
+function colors(most, least) {  // constructor
+    this.mostFav = most;
+    this.leastFav = least;
+}
+ 
+var hisColor = new colors("Green", "Pink");
+
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #12</h3>
+	    <p>Click the button to create 3 objects in different ways</p>
+	    <button type="button" id="button12" onclick="Requirement12();"> Create Objects </button></br>
+	    <p id="result12"></p>
+		<p id="result12a"></p>
+		<p id="result12b"></p>
+		<p id="result12c"></p>
+		<p id="result12d"></p>
+		<p id="result12e"></p>
+		<script>
+		function Requirement12(){
+    var litText = "";
+    var keyText = "";
+    var conText = "";
+    for(var x in person){
+        litText += person[x] + " ";
+    }
+    for(var y in cities){
+        keyText += cities[y] + " ";
+    }
+    for(var z in hisColor){
+        conText += hisColor[z] + " ";
+    }
+    document.getElementById("result12").innerHTML = "Object Person created with a literal technique.";
+    document.getElementById("result12a").innerHTML = litText;
+    document.getElementById("result12b").innerHTML = "Object  Cities created with a keyword technique.";
+    document.getElementById("result12c").innerHTML = keyText;
+    document.getElementById("result12d").innerHTML = "Object Color created with a constructor technique.";
+    document.getElementById("result12e").innerHTML = conText;
+}
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #13</h3>
+	    <p>Click the button to create a new property in an existing object.</p>
+	    <button type="button" id="button13" onclick="Requirement13();"> Create new property </button></br>
+	    <p id="result13"></p>
+		<p id="result13a"></p>
+		<p id="result13b"></p>
+		<script>
+		function Requirement13(){
+    person.hairColor = "Brown"; 
+    var newText = "";
+    for(var x in person){
+        newText += person[x] + " ";
+    }
+    document.getElementById("result13").innerHTML = "Object Person with new property hair color.";
+    document.getElementById("result13a").innerHTML = newText;
+    delete person.hairColor;
+    document.getElementById("result13b").innerHTML = "Hair color has been deleted now.";
+    
+}
+function plane(Type, passengers, speed, range) {
+    this.Type = Type;
+    this.passengers = passengers;
+    this.speed = speed;
+    this.range = range;
+    this.addFuel = function (fuel){
+    this.range += fuel * 10;
+    };
+}
+var aircraft = new plane("Bi-plane", 2, 100, 1000);
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #14</h3>
+	    <p id="p14a">Enter a number to change our planes speed.(We start at 100)</p>
+	    <input type="text" id="Text_14" name="TextBox14a">
+	    <button type="button" id="button14" onclick="Requirement14();"> Change Speed </button></br>
+	    <p id="result14"></p>
+        <p id="result14a"></p>
+        <p id="result14b"></p>
+		<script>
+		function Requirement14(){
+    var num = parseInt(document.getElementById("Text_14").value);
+    changeSpeed(num);
+    document.getElementById("result14").innerHTML = "Type: " + aircraft.Type;
+    document.getElementById("result14a").innerHTML = "passengers: " + aircraft.passengers;
+    document.getElementById("result14b").innerHTML = "speed: " + aircraft.speed;
+}
+function changeSpeed(val){
+    aircraft.speed += val;
+}
+		</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+	    <h3> Requirement #15</h3>
+	    <p id="p15a">Click the button to increase the range of our plane.</p>
+	    <button type="button" id="button15" onclick="Requirement15();"> Increase range </button></br>
+	    <p id="result15"></p>
+		<p id="result15a"></p>
+		<script>
+		function Requirement15(){
+    document.getElementById("result15").innerHTML = "The air craft range was " + aircraft.range + " miles";
+    aircraft.addFuel(10);
+    document.getElementById("result15a").innerHTML = "The air craft range is now " + aircraft.range + " miles";
+}
+		</script>
+        </div>
+    </body>
+</html>

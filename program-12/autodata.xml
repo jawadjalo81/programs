@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autodata>
+	<car>
+		<make>ford</make>
+		<model>truck</model>
+		<style>two-door</style>
+		<year>2007</year>
+		<color>gray</color>
+	</car>
+	<car>
+		<make>chevy</make>
+		<model>car</model>
+		<style>hatchbacks</style>
+		<year>2010</year>
+		<color>red</color>
+	</car>
+	<car>
+		<make>Toyota</make>
+		<model>camery</model>
+		<style>four-door sedans</style>
+		<year>2016</year>
+		<color>white</color>
+	</car>
+	<car>
+		<make>Hyundai</make>
+		<model>Elantra</model>
+		<style>hatchbacks</style>
+		<year>2014</year>
+		<color>black</color>
+	</car>
+	<car>
+		<make>kia</make>
+		<model>optima</model>
+		<style>two-door</style>
+		<year>2013</year>
+		<color>silver</color>
+	</car>
+	<car>
+		<make>Honda</make>
+		<model>Accord</model>
+		<style>convertible</style>
+		<year>2017</year>
+		<color>blue</color>
+	</car>
+	<car>
+		<make>Suzuki</make>
+		<model>Swift</model>
+		<style>sport car</style>
+		<year>2001</year>
+		<color>yellow</color>
+	</car>
+	<car>
+		<make>Subaru</make>
+		<model>Forester</model>
+		<style>SUV</style>
+		<year>2015</year>
+		<color>light brown</color>
+	</car>
+	<car>
+		<make>Nissan</make>
+		<model>Titan</model>
+		<style>truck</style>
+		<year>2013</year>
+		<color>black</color>
+	</car>
+	<car>
+		<make>BMW</make>
+		<model>i3</model>
+		<style>hybird</style>
+		<year>2017</year>
+		<color>silver</color>
+	</car>
+</autodata>

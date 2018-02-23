@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <link rel="SHORTCUT ICON" href="/images/favicon.ico">
+        <title>
+            program-04 folder
+        </title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="./program-04.js">
+			console.log("Ive been read");
+			document.getElementById("big").addEventListener("load", Requirement03);
+		</script>
+    </head>
+    <body id="big">
+        <hr>
+        <h1> index.html in the program-04 folder</h1>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			
+			<h3> Requirement #01</h3>
+			<center><div id="colorDate"><h2 id="dateDisplay"></h2></div></center>
+			<script>
+					window.onload = function() {
+						document.getElementById("dateDisplay").innerHTML = Date();
+						(function (){document.getElementById("colorDate").style.backgroundColor = "cyan";})();
+						var element = document.createElement("script");
+						element.src = "program-04.js";
+						document.body.appendChild(element);
+					};
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #02</h3>
+			 <select id="req2" onchange="Requirement02();">
+				<option>  </option>
+				<option value="AntiqueWhite">AntiqueWhite </option>
+				<option value="Aqua">Aqua </option>
+				<option value="Bisque">Bisque </option>
+				<option value="Blue">Blue</option>
+				<option value="Brown">Brown </option>
+				<option value="Chartreuse">Chartreuse </option>
+				<option value="CornflowerBlue">CornflowerBlue</option>
+				<option value="Cyan">Cyan</option>
+				<option value="DarkGray">DarkGray</option>
+				<option value="DodgerBlue">DodgerBlue</option>
+				<option value="FireBrick">FireBrick</option>
+				<option value="Grey">Grey</option>
+				<option value="Green">Green</option>
+				<option value="Indigo">Indigo </option>
+				<option value="Navy">Navy </option>
+				<option value="Olive">Olive </option>
+				<option value="Orange">Orange</option>
+				<option value="Red">Red</option>
+				<option value="Teal">Teal</option>
+				<option value="Yellow">Yellow</option>
+			  </select> 
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #03</h3>
+			<p id="req3"></p>
+			<script>
+			document.getElementById("req3").innerHTML = "cookiesEnabled is " + navigator.cookieEnabled;
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #04</h3>
+			<p>Counting with a local variable and displaing a random number.</p>
+			<button type="button" onclick="setTimeout(Requirement04, 100);"> Count </button>
+			<p id="req4">0</p>
+			<p id="req4a"></p>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #05</h3>
+			Please push <button onclick="Requirement5();">this</button>
+			to <span id="textIsHidden">see</span> five paragraphs.
+			<p class="toggle" id="toggleParagraph" >Four score and seven years ago.</p>
+			<div class="commonName" id="id01" style="display: none">
+				<p>Four score and seven years ago</p>
+				<p>our fathers brought forth on this continent a new nation</p>
+				<p>conceived in Liberty</p>
+				<p>and dedicated to the proposition</p>
+				<p>that all men are created equal.</p>
+			</div>
+			<p id="id02"></p>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #06</h3>
+			<p>Change the font size and family of #5</p>
+			<button onclick="Requirement06();"> Change </button>
+			<script>
+			function Requirement06(){
+				document.getElementById("toggleParagraph").style.fontSize = "28";
+				document.getElementById("toggleParagraph").style.fontFamily = "Impact,Charcoal,sans-serif";
+			}
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #07</h3>
+			<button onclick="changeText();">click me</button>		
+			<div id="output">
+			        
+			</div>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #08</h3>
+			<center>
+			<table border='1' padding='1' border-spacing='5'>
+				<tbody>
+					<tr>
+						<td style="width:300px;height:200px;"><img id="img1" src="images/req91.jpg" style="width:300px;height:200px;"></td>
+						<td style="width:300px;height:200px;"><img id="img2" src="images/req92.jpg" style="width:300px;height:200px;"></td>
+					</tr>
+					<tr>
+						<td style="width:300px;height:200px;"><img id="img3" src="images/req93.jpg" style="width:300px;height:200px;"></td>
+						<td  style="width:300px;height:200px;"><img id="img4" src="images/req94.jpg" style="width:300px;height:200px;"></td>
+					</tr>
+					<tr>
+						<td  style="width:300px;height:200px;"><img id="img5" src="images/req95.jpg" style="width:300px;height:200px;"></td>
+						<td style="width:300px;height:200px;"><img id="img6" src="images/req96.jpg" style="width:300px;height:200px;"></td>
+					</tr>
+				</tbody>
+			</table>
+			<select id="req8" onchange="Requirement08();">
+				<option>  </option>
+				<option value="img1">Coliseum </option>
+				<option value="img2">The Great Pyramids </option>
+				<option value="img3">Taj Mahal </option>
+				<option value="img4">Sphinkx </option>
+				<option value="img5">The Great Wall </option>
+				<option value="img6">Machu Picchu </option>
+			</select>	
+			</center>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #09</h3>
+			<button onclick="startWorker();"> Start Worker </button>
+			<button onclick="stopWorker();"> Stop Worker </button>
+			<div id="req9" style="display:block" >
+				<table>
+					<tr>
+						<td style="width:300px;height:200px;"><img id="r9img" src="images/req91.jpg" style="width:300px;height:200px;"></td>
+					</tr>
+				</table>
+			
+			<div id="test"></div>
+			</div>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #10</h3>
+			<button id="req10" style="display:block" onclick="Requirement10();"> Hide #9 Image </button>
+			<script>
+				
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #11</h3>
+			<p>Hover your mouse over the button in #10 to change it's color.</p>
+			
+			<script>
+
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #12</h3>
+			<p><a href='requirement-11.html'> Requirement #11 </a></p>
+			<script>
+
+			</script>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div>
+			<h3> Requirement #13</h3>
+			<button id="req13" onclick="Requirement13();"> Create Paragraph </button>
+			<div id="div13"></div>
+        </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <hr></hr>
+        <div id="req14">
+			<h3> Requirement #14</h3>
+			<p onmouseover="Requirement14()" >A mouseover will display how many paragraph elements that are on this page.</p>			
+			<script>
+
+			</script>
+        </div>
+    </body>
+</html>

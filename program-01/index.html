@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        program-01
+    </title>
+</head>
+<body>
+
+    <!--#1-->
+    <div>
+        <h3>Requirement #01</h3>
+        <center>
+            <img id="myImage" src="images/lighton.png" onclick="changeImage();" style="width:300px;height:auto;">
+            <p id="date_time_display"></p>
+            <h3>Requirement #02</h3>
+            <p>
+                <select onchange="changeSize(this.value);">
+                    <option value="300px">Large</option>
+                    <option value="200px">Medium</option>
+                    <option value="100px">Small</option>
+                </select>
+            </p>
+        </center>
+    </div>
+    <!--#3-->
+    <div id="third">
+        <form>
+            <h3>Requirement #03</h3>
+            <input type="button" name="clear_page" value="Clear Page" onClick="pageCleared();">
+        </form>
+    </div>
+    <!--#4-->
+    <div>
+        <h3>Requirement #04</h3>
+        <p id="changeText">Original Text</p>
+        <button type="button" onclick="changeText()">Generate New Text</button>
+    </div>
+    <!--#5-->
+    <div style=" ">
+        <h3>Requirement #05</h3>
+
+        <button onclick="getLocation()">Get Current Location</button>
+
+        <div id="demo"></div>
+
+    </div>
+    <!--#6-->
+    <div>
+        <h3>Requirement #06</h3>
+        Enter First Number : <br>
+        <input type="text" id="Text1" name="TextBox1">
+        <br>
+        Enter Second Number : <br>
+        <input type="text" id="Text2" name="TextBox2">
+        <br>
+        <input type="button" name="clickbtn" value="Display Result" onclick="add_number();"><br>
+        Result adding: <br>
+        <input type="text" id="txtresult" name="TextBox3"><br>
+        Result subtracting: <br>
+        <input type="text" id="txtresult1" name="TextBox4"><br>
+        Result multiplying: <br>
+        <input type="text" id="txtresult2" name="TextBox5"><br>
+        Result dividing: <br>
+        <input type="text" id="txtresult3" name="TextBox6">
+        <br>
+    </div>
+    <!--#7-->
+    <div>
+        <h3>Requirement #07</h3>
+        <p>Click the button to display the formatted number.</p>
+        <button onclick="myFunction();">Try it</button>
+        <p id="r07"></p>
+    </div>
+    <!--#8-->
+    <div>
+        <h3>Requirement #08</h3>
+        Enter any Number : <br>
+        <input type="text" id="numBox" name="numBox">
+        <input type="button" value="Even or Odd" onclick="evenodd();">
+        <div id="die"></div>
+    </div>
+    <!--#9-->
+    <div>
+        <h3>Requirement #09</h3>
+        <p>Choose increment or decrement check box and click button to see the number change.</p>
+
+        <p id="r09">10</p>
+
+        <input type="checkbox" id="r09b" name="increment" value="increment"> increment<br>
+        <input type="checkbox" id="r09c" name="decrement" value="decrement"> decrement<br>
+        <input type="button" value="clickbtn" onclick="changeValueNum(parseInt(document.getElementById('r09').innerHTML));">
+    </div>
+    <!--#10-->
+    <div>
+        <h3>Requirement #10</h3>
+        <p>Choose a value to see it displayed</p>
+        <p align="left">
+            <b>Select value:</b><br>
+            <select onchange="displayValue(this.value);">
+                <option value="0"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <h1 id="r10"></h1>
+        </p>
+    </div>
+    <!--#11-->
+    <div>
+        <style>
+            #target {
+                width: 300px;
+                height: 100px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+            }
+        </style>
+        <h3>Requirement #11</h3>
+        <p>Drag the image into the rectangle:</p>
+        <form>
+            <img id="drag1" draggable="true" src="images/dragging.gif" ondragstart="dragstart_handler(event);" width="300" height="100">
+            <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></div>
+        </form>
+    </div>
+    <!--#12-->
+    <div onmouseover="ChangeBackgroundColor(this);" onmouseout="RestoreBackgroundColor(this);">
+        <h3>Requirement #12</h3>
+        <p>This section will modify the background color </p>
+        <p>when a mouseOver event occurs</p>
+        <p>and return to normal when the mouse leaves.</p>
+    </div>
+
+
+
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            document.getElementById('date_time_display').innerHTML = Date();
+            if (image.src.match("lighton")) {
+                image.src = "images/lightoff.png";
+            } else {
+                image.src = "images/lighton.png";
+            }
+        }
+        function changeSize(width) {
+            var image = document.getElementById('myImage');
+            image.style.width = width;
+        }
+        function pageCleared() {
+            document.write("<body style='background-color:powderblue;'><p>Page Cleared </br>");
+            document.write("<a href='javascript:history.back();'>Back to index.html</a></p></body>");
+        }
+        function changeText() {
+            var pTag = document.getElementById("changeText");
+            pTag.innerHTML = "New Text";
+            pTag.style.color = "red";
+            pTag.style.fontSize = "xx-large";
+        }
+
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        //function getLocation() {
+        //       var output = document.getElementById("demo");
+        //       //you need to get the postion first
+
+        //function showPosition(position) {
+        //	output.innerHTML = "Latitude: " + position.coords.latitude +
+        //	"<br>Longitude: " + position.coords.longitude;
+        //}
+        //if (navigator.geolocation) {
+        //	navigator.geolocation.getCurrentPosition(showPosition);
+        //} else {
+        //	output.innerHTML = "Geolocation is not supported by this browser.";
+        //}
+        //}
+
+        function add_number() {
+            var first_number = parseInt(document.getElementById("Text1").value);
+            var second_number = parseInt(document.getElementById("Text2").value);
+            var result = first_number + second_number;
+            var result1 = first_number - second_number;
+            var result2 = first_number * second_number;
+            var result3 = first_number / second_number;
+            document.getElementById("txtresult").value = result;
+            document.getElementById("txtresult1").value = result1;
+            document.getElementById("txtresult2").value = result2;
+            document.getElementById("txtresult3").value = result3;
+        }
+
+        function myFunction() {
+            var x = "77";
+            var z = 99;
+            var numStr = x.toString().concat(z.toString());
+            document.getElementById('r07').innerHTML = numStr;
+        }
+        function evenodd() {
+            var img1 = document.createElement("img");
+            img1.src = "images/evenDie.png";
+            var img2 = document.createElement("img");
+            img2.src = "images/oddDie.png";
+            var src = document.getElementById("die");
+
+            var num = parseInt(document.getElementById("numBox").value);
+            if (num % 2 === 0) {
+                src.appendChild(img1);
+            }
+            else {
+                src.appendChild(img2);
+            }
+        }
+        function changeValueNum(num) {
+            var ch = document.getElementById('r09b').checked;
+            var ch2 = document.getElementById('r09c').checked;
+            if (ch === true) {
+                num++;
+                document.getElementById('r09').innerHTML = num;
+            }
+            if (ch2 === true) {
+                num--;
+                document.getElementById('r09').innerHTML = num;
+            }
+
+        }
+        function displayValue(choice) {
+            var choiceName = "";
+            if (choice.match("1")) {
+                choiceName = "ONE";
+                document.getElementById('r10').style.color = 'red';
+                document.getElementById('r10').innerHTML = 'ONE';
+            }
+            if (choice.match("2")) {
+                choiceName = "TWO";
+                document.getElementById('r10').style.color = 'blue';
+                document.getElementById('r10').innerHTML = 'TWO';
+            }
+            if (choice.match("3")) {
+                choiceName = "THREE";
+                document.getElementById('r10').style.color = 'green';
+                document.getElementById('r10').innerHTML = 'THREE';
+            }
+            if (choice.match("4")) {
+                choiceName = "FOUR";
+                document.getElementById('r10').style.color = 'purple';
+                document.getElementById('r10').innerHTML = 'FOUR';
+            }
+        }
+        function dragstart_handler(ev) {
+            ev.dataTransfer.setData("text/plain", ev.target.id);
+            ev.dropEffect = "move";
+        }
+        function dragover_handler(ev) {
+            ev.preventDefault();
+            ev.dataTransfer.dropEffect = "move";
+        }
+        function drop_handler(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        var TableBackgroundNormalColor = "#ffffff";
+        var TableBackgroundMouseoverColor = "#9999ff";
+        function ChangeBackgroundColor(row) {
+            row.style.backgroundColor = TableBackgroundMouseoverColor;
+        }
+        function RestoreBackgroundColor(row) {
+            row.style.backgroundColor = TableBackgroundNormalColor;
+        }
+    </script>
+
+
+
+</body>
+</html>
